@@ -1,11 +1,34 @@
 require 'test_helper'
 
-class GeoUtilTest < Minitest::Test
-  def test_that_it_has_a_version_number
-    refute_nil ::GeoUtil::VERSION
+class TestGeoUtil
+  include GeoUtil
+end
+
+describe GeoUtil do
+  before do
+    @address = %q{
+      1600 GRAND AVE
+      Saint Paul, MN
+      (44.9378926, -93.1690434)
+    }
+
+    @geo_util = TestGeoUtil.new
   end
 
-  def test_it_does_something_useful
-    assert false
+  describe "#extract_latlong" do
+    it "extracts latlong when present" do
+      res = @geo_util.send(:extract_latlong, @address)
+      assert_equal ["44.9378926", "-93.1690434", :extracted], res
+    end
+
+    it "strips whitespace" do
+      res = @geo_util.send(:extract_latlong, "\n  (44.9378926 ,   -93.1690434)")
+      assert_equal ["44.9378926", "-93.1690434", :extracted], res
+    end
+
+    it "returns nil when no latlong" do
+      res = @geo_util.send(:extract_latlong, "1600 GRAND AVE\nSaint Paul, MN")
+      assert_nil res
+    end    
   end
 end
