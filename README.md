@@ -1,8 +1,6 @@
 # GeoUtil
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/geo_util`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+GeoUtil is a set of (mostly conversion) utilities for working with geo files across providers (like CartoDB, Socrata, etc.)
 
 ## Installation
 
@@ -22,7 +20,15 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Socrata to CartoDB
+Some Socrata files have latitude and longitude tacked onto the end of a street address -- CartoDB doesn't extract it so GeoUtil will do it for you.
+
+To remove latitude and longitude from the end of a street address and add columns LATITUDE and LONGITUDE to a dataset, run
+
+    $ <exec steps here>
+
+### Geocoding
+Coming soon.
 
 ## Development
 

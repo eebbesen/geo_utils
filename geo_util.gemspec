@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Eric Ebbesen"]
   spec.email         = ["eebbesen.git@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.summary       = %q{A set of (mostly conversion) utilities for working with geo files across providers}
+  spec.description   = %q{A set of (mostly conversion) utilities for working with geo files across providers (like CartoDB, Socrata, etc.)}
   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
   spec.license       = "MIT"
 
