@@ -10,6 +10,15 @@ http://www2.census.gov/geo/docs/reference/codes/files/st27_mn_cou.txt
 #### Lat/Long
 `http://data.fcc.gov/api/block/find?latitude=[latitude]&longitude=[longitude]&showall=[true/false]`
 
+`http://data.fcc.gov/api/block/find?latitude=44.938113&longitude=-93.169011&showall=true`
+yields
+
+    <Response xmlns="http://data.fcc.gov/api" status="OK" executionTime="75">
+    <Block FIPS="271230351001005"/>
+    <County FIPS="27123" name="Ramsey"/>
+    <State FIPS="27" code="MN" name="Minnesota"/>
+    </Response>
+
 #### Ramsey
 MN,27,123,Ramsey County,H1
 
@@ -31,6 +40,8 @@ returns
 	["Block Group 4, Census Tract 301, Ramsey County, Minnesota","756","27","123","030100","4"],
 	["Block Group 5, Census Tract 301, Ramsey County, Minnesota","901","27","123","030100","5"],
     ...
+
+
 
 
 ### List of variables
