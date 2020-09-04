@@ -11,7 +11,6 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{A set of (mostly conversion) utilities for working with geo files across providers}
   spec.description   = %q{A set of (mostly conversion) utilities for working with geo files across providers (like CartoDB, Socrata, etc.)}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
@@ -27,7 +26,7 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_development_dependency "bundler", "~> 1.11"
-  spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "bundler", "~> 2.1.4"
+  spec.add_development_dependency "rake", "~> 12.3.3"
   spec.add_development_dependency "minitest", "~> 5.0"
 end
